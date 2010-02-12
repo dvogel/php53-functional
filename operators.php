@@ -72,8 +72,20 @@ function concat ($a, $b) {
 	return $a . $b;
 }
 
+function wrap ($left, $right, $s) {
+	return $left . $a . $right;
+}
+
 function element ($k, $a) {
 	return $a[$k];
+}
+
+function accessor ($key) {
+	return partial(element, $key);
+}
+
+function lookup_in ($a) {
+	return partial(flip(element), $a);
 }
 
 function first ($a) { return element(0, $a); }
