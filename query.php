@@ -17,4 +17,8 @@ function rekey ($xs, $f) {
 	return $ys;
 }
 
+function no_nulls ($xs) {
+	return array_filter($xs, compose(not, is_null));
+}
+
 ?>
